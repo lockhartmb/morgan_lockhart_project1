@@ -1,0 +1,517 @@
+/* This setup snippet came from the notes provided */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* This visuallyHidden snippet came from the notes provided */
+.visuallyHidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
+
+body {
+}
+
+/* GLOBAL and TYPOGRAPHY STYLES */
+
+html {
+    font-size: 125%;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none; 
+}
+
+body {
+    font-family: 'Catamaran', sans-serif;
+}
+
+h1, h2, h4 {
+    font-family: 'Pacifico', cursive;
+}
+
+.wrapper {
+    width: 80%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* This skip link stuff came from the notes, not my head*/
+.skipLink { 
+    position: absolute;
+    left: -1000px;
+    top: 5px;
+    z-index: 999;
+    background: white;
+    color: black;
+}
+
+.skipLink:focus {
+  left: 50vw;
+}
+
+/* HEADER STYLES ARE HERE */
+header {
+    background-image: url(assets/heroBike.png);
+    min-height: 100vh;  
+    background-size: cover;
+    background-position: center center;
+    padding: 1px 0;
+}
+
+.hamburger {
+    height: 94px;
+    display: none;
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    display: inline-block;
+}
+
+nav li {
+    float: left;
+}
+
+nav a {
+    padding: 25px;
+    display: inline-block;
+    color: white; /*#white*/
+    font-weight: 600;
+    line-height: 29px;
+    transition: color 0.15s ease-in-out;
+}
+
+nav a:hover {
+    color: #f2a11c; /*#squash*/
+}
+
+h1 {
+    color: #f2a11c; /*#squash*/
+    font-size: 6.5rem;
+    margin-top: calc(50vh - 208.25px); /*this is equal to [50vh - (94px: the height of the top nav) - (half the height of the h1)] and is adjusted each time the font size of the h1 changes, this does not seem like the best way to accomplish this but was the most accurate way I could come up with*/
+    margin-left: calc(50vw - 285px);
+    margin-bottom: 0;
+    display: inline-block;
+}
+
+.social {
+    margin: 0;
+    float: right;
+    padding-right: 25px;
+    margin-top: calc(50vh - 159.25px);
+    /* position: absolute; */
+}
+
+.container {
+    /* position: relative; */
+}
+
+.social a {
+    color: #f2a11c; /*#squash*/
+    transition: color 0.15s ease-in-out;
+}
+
+.social a:hover {
+    color: white; /*#white*/
+}
+
+/* GENERIC SECTION STYLES */
+
+h2 {
+    font-size: 2.1rem;
+    margin: 0;
+    color: #222222; /*colour taken from design*/
+}
+
+section p {
+    line-height: 1.45; /*1.45 represents the ratio 29px:20px which is the ratio of the prescribed line height to the font size*/
+    margin: 0;
+    color: #1f2022; /*#darker-grey*/
+}
+
+.half {
+    width: 50%;
+    float: left;
+}
+
+.first {
+    float: right;
+}
+
+.readMore {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    background-color: #222222; /*colour taken from design*/
+    color: #f2a11c; /*#squash*/
+    border: none;
+    text-transform: uppercase;
+    margin-top: 15px;
+    padding: 12px 20px;
+    transition: color 0.15s ease-in-out;
+}
+
+.readMore:hover {
+    color: #222222; /*colour taken from design*/
+    background-color: #f2a11c; /*#squash*/
+}
+
+.text {
+    padding: 8%;
+}
+
+/* MEET ALISSA SECTION STYLES */
+
+.meetAlissa {
+    background-color: #f4f4f4; /*#light-grey*/
+    padding: 70px 0;
+}
+
+.meetAlissa img {
+    width: 25%;
+    float: left;
+    padding-top: 20px;
+}
+
+.alissaText {
+    width: 75%;
+    float: left;
+    padding-left: 30px;
+}
+/* LINKS SECTION STYLES */
+
+.links {
+    min-height: 50vh;
+    background-image: url(assets/roadCyclists.png);
+    background-size: cover;
+    background-position: top right;
+    text-align: center;
+}
+
+.linksContainer {
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.linkIcons {
+    float: left;
+    width: 200px;
+    padding-top: 15vh;
+}
+
+
+.links i {
+    color: white; /*#white*/
+    font-size: 41px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+
+h3 {
+    color: #f2a11c; /*#squash*/
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 25px;
+    transition: color 0.15s ease-in-out;
+}
+
+h3:hover {
+    color: white; /*#white*/
+}
+/* THE GRAM SECTION STYLES */
+
+.theGram {
+    padding: 70px 0;
+}
+
+.theGram h2 {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.gallery img {
+    width: calc((100% - 40px) / 3);
+    float: left;
+    margin: 10px;
+}
+
+.gallery img:first-child {
+    margin-left: 0;
+}
+
+.gallery img:last-child {
+    margin-right: 0;
+}
+
+/* FOOTER STYLES */
+
+.top {
+    background: #222222; /*colour taken from design*/
+    padding: 70px 0;
+}
+
+.bottom {
+    background: #000000; /*#black--colour taken from design*/
+}
+
+footer nav {
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+    color: white; /*#white*/
+}
+
+h4 {
+    color: #f2a11c; /*#squash*/
+    font-size: 1.25rem;
+    margin: 0 0 5px 0;
+}
+
+.contactInfo, .stayUpdated {
+    width: 50%;
+    float: left;
+}
+
+.contactInfo span:hover {
+    color: #f2a11c; /*#squash*/
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+input {
+    font-size: 0.9rem;
+    border: none;
+    margin: 0;
+    height: 50px;
+    color: #232323; /*colour taken from design*/
+    padding-left: 25px;
+    display: block;
+    width: 75%;
+    float: left;
+}
+
+form button {
+    background: #f2a11c; /*#squash*/
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #1f2022; /*#darker-grey*/
+    border: none;
+    margin: 0;
+    height: 50px;
+    display: block;
+    width: 25%;
+    float: left;
+    min-width: 130px;
+    transition: color 0.15s ease-in-out;
+}
+
+form button:hover {
+    color: #f2a11c; /*#squash*/
+    background: #1f2022; /*#darker-grey*/
+    border: 2px solid #f2a11c; /*#squash*/
+}
+
+.bottom p {
+    text-align: center;
+    color: #fcfcfc; /*colour taken from design*/
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 10px;
+}
+
+/* MEDIA QUERIES START HERE */
+
+@media (max-width: 1350px) {
+    .half {
+        width: 100%;
+    }
+
+    input {
+        width: 65%;
+    }
+}
+
+@media (max-width: 1070px) {
+    .contactInfo {
+        width: 40%;
+    }
+    
+    .stayUpdated {
+        width: 60%;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .social, header nav {
+        display: none;
+    }
+    
+    .hamburger {
+        display: block;
+        margin: 0;
+        padding: 0;
+        color: white;
+        font-size: 2rem;
+        float: right;
+        padding-right: 25px;
+        transition: color 0.15s ease-in-out;
+    }
+    
+    .hamburger:hover {
+        color: #f2a11c; /*#squash*/
+    }
+    
+    h1 {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .contactInfo, .stayUpdated {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+
+    .stayUpdated {
+        padding-top: 50px;
+    }
+
+    input, form button {
+        width: 100%;
+    }
+
+    input {
+        margin-bottom: 10px;
+    }
+
+    form button {
+        position: static;
+    }
+}
+
+@media (max-width: 760px) {
+    h1 {
+        font-size: 5rem;
+        margin-top: calc(50vh - 182px);
+    }
+    
+    .aboutUs, .ourMission, .meetAlissa {
+        text-align: center;
+    }
+
+    .meetAlissa img, .alissaText {
+        float: none;
+    }
+
+    .meetAlissa img {
+        width: 100%;
+    }
+
+    .alissaText {
+        width: 100%;
+        padding-left: 0;
+        padding: 8% 0;
+    }
+    
+    .meetAlissa h2 {
+        text-align: center;
+    }
+    
+    .meetAlissa p {
+        text-align: left;
+    }
+
+    .linkIcons {
+        float: none;
+    }
+
+    .linkIcons:last-child {
+        padding-bottom: 15vh;
+    }
+
+    .gallery img {
+        width: calc((100% - 20px) / 2);
+        float: left;
+        margin: 10px;
+    }
+    
+    .gallery img:nth-child(2) {
+        margin-right: 0;
+    }
+
+    .gallery img:last-child {
+        display: none;
+    }
+}
+
+@media (max-width: 560px) {
+    .wrapper {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 3.75rem;
+        margin-top: calc(50vh - 147px);
+    }
+    
+    .footer a {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 399px) {
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+/* These screen resolution media queries were largely derived from the example in the notes */
+@media  (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    header {
+        background-image: url(assets/heroBike2x.png);
+        background-size: cover;
+        background-position: center center;
+    }
+    
+    .links {
+        background-image: url(assets/roadCyclists2x.png);
+        background-size: cover;
+        background-position: top right;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 275dpi) {
+    header {
+        background-image: url(assets/heroBike3x.png);
+        background-size: cover;
+        background-position: center center;
+    }
+    
+    .links {
+        background-image: url(assets/roadCyclists3x.png);
+        background-size: cover;
+        background-position: top right;
+    }
+}
