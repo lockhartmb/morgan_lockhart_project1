@@ -42,11 +42,11 @@ h1, h2, h4 {
 
 .wrapper {
     width: 80%;
-    max-width: 1300px;
+    max-width: 1280px;
     margin: 0 auto;
 }
 
-/* This skip link stuff came from the notes, not my head*/
+/* These skip link styles came from the notes, not my head*/
 .skipLink { 
     position: absolute;
     left: -1000px;
@@ -60,7 +60,7 @@ h1, h2, h4 {
   left: 50vw;
 }
 
-/* HEADER STYLES ARE HERE */
+/* HEADER STYLES */
 header {
     background-image: url(assets/heroBike.png);
     min-height: 100vh;  
@@ -103,7 +103,7 @@ h1 {
     color: #f2a11c; /*#squash*/
     font-size: 6.5rem;
     margin-top: calc(50vh - 208.25px); /*this is equal to [50vh - (94px: the height of the top nav) - (half the height of the h1)] and is adjusted each time the font size of the h1 changes, this does not seem like the best way to accomplish this but was the most accurate way I could come up with*/
-    margin-left: calc(50vw - 285px);
+    margin-left: calc(50vw - 285px); /* this is equal to [50vw - (half the width of the h1)] and is adjusted each time the font size of the h1 changes */
     margin-bottom: 0;
     display: inline-block;
 }
@@ -192,6 +192,7 @@ section p {
     float: left;
     padding-left: 30px;
 }
+
 /* LINKS SECTION STYLES */
 
 .links {
@@ -207,7 +208,7 @@ section p {
     display: inline-block;
 }
 
-.linkIcons {
+.linkIcon {
     float: left;
     width: 200px;
     padding-top: 15vh;
@@ -234,6 +235,7 @@ h3 {
 h3:hover {
     color: white; /*#white*/
 }
+
 /* THE GRAM SECTION STYLES */
 
 .theGram {
@@ -339,7 +341,7 @@ form button:hover {
     padding: 10px;
 }
 
-/* MEDIA QUERIES START HERE */
+/* MEDIA QUERIES */
 
 @media (max-width: 1350px) {
     .half {
@@ -443,11 +445,11 @@ form button:hover {
         text-align: left;
     }
 
-    .linkIcons {
+    .linkIcon {
         float: none;
     }
 
-    .linkIcons:last-child {
+    .linkIcon:last-child {
         padding-bottom: 15vh;
     }
 
