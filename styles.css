@@ -113,11 +113,6 @@ h1 {
     float: right;
     padding-right: 25px;
     margin-top: calc(50vh - 159.25px);
-    /* position: absolute; */
-}
-
-.container {
-    /* position: relative; */
 }
 
 .social a {
